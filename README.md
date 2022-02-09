@@ -8,11 +8,10 @@ _More TBA Soon_.
 - [x] Ability to Examine PAKFiles (see size, validity, and any CRC / Header mismatch errors)
 - [x] Ability to Extract PAKFiles into a Folder to Edit
 - [x] Ability to Build a PAKFile from a Folder
-- [x] Incredibly Efficient Mod Builder with 79% (21% of Original Size) [LZMA Compression](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Markov_chain_algorithm) on the size of the mods!
 
 # Known Bugs / Issues
 This is a collective list of known bugs / glitches / issues.
- * Issue with Building .pak Files - LZMA Compression is _incompatible_ with C-Engine. This will be hotfixed soon.
+ * None / TBA
 
 # Running the Utility
 ## As an Executable / Binary
@@ -38,13 +37,14 @@ As writing a new mod makes use of upping the integer in the `dataN.pak` filename
 # FAQ
 **Q1: Why does this need to be ran as an administrator?**<br>
 **A1: Some people store their games / mod management folders in weird places that non-elevated applications typically can't access. This is simply insurance on that possibility, making sure _any user_ who stores their files _anywhere_ can use this tool!**
+**Q2: Why not opt for a better compression algorithm?**<br>
+**A2: This application originally used LZMA compression, which works great, but is unfortunately unsupported by C-Engine. It appears the current compression method, the default zip compression method of deflation, is the only functioning method of compressing .pak files.**
 
 # Roadmap
 This is a loose outline of what is in the future for the DL2 PAKFile Utility!
 - [x] Ability to Examine PAKFiles (see size, validity, and any CRC / Header mismatch errors)
 - [x] Ability to Extract PAKFiles into a Folder to Edit
 - [x] Ability to Build a PAKFile from a Folder
-- [x] Incredibly Efficient Mod Builder with 79% (21% of Original Size) [LZMA Compression](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Markov_chain_algorithm) on the size of the mods!
 - [ ] Search PAKFiles for Specific Contents
 - [ ] GUI Integration
 - [ ] Intelligently Browse DL2 PAKFile Folder Contents (MOD MANAGER FUNCTIONALITY)
