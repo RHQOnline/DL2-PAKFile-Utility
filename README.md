@@ -4,6 +4,12 @@ This tool aims to make PAKFile modding a breeze for both Dying Light 2 modders a
 See the [Roadmap](https://github.com/RHQOnline/DL2-PAKFile-Utility#roadmap) for a better idea of what's to come!<br>
 _More TBA Soon_.
 
+# Features
+- [x] Ability to Examine PAKFiles (see size, validity, and any CRC / Header mismatch errors)
+- [x] Ability to Extract PAKFiles into a Folder to Edit
+- [x] Ability to Build a PAKFile from a Folder
+- [x] Incredibly Efficient Mod Builder with 79% (21% of Original Size) [LZMA Compression](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Markov_chain_algorithm) on the size of the mods!
+
 # Known Bugs / Issues
 This is a collective list of known bugs / glitches / issues.
  * None / TBA
@@ -35,8 +41,14 @@ As writing a new mod makes use of upping the integer in the `dataN.pak` filename
 
 # Roadmap
 This is a loose outline of what is in the future for the DL2 PAKFile Utility!
- * GUI Integration
- * Intelligently Browse DL2 PAKFile Folder Contents
- * Detailed Documentation for both the Application and for Modding DL2
- * More Modding Tools Built-In
- * More to be Announced Soon!
+- [x] Ability to Examine PAKFiles (see size, validity, and any CRC / Header mismatch errors)
+- [x] Ability to Extract PAKFiles into a Folder to Edit
+- [x] Ability to Build a PAKFile from a Folder
+- [x] Incredibly Efficient Mod Builder with 79% (21% of Original Size) [LZMA Compression](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Markov_chain_algorithm) on the size of the mods!
+- [ ]  GUI Integration
+- [ ]  Intelligently Browse DL2 PAKFile Folder Contents
+- [ ]  Detailed Documentation for both the Application and for Modding DL2
+- [ ]  Auto-Updating Feature for the Utility that Pulls from GitHub
+- [ ]  More Modding Tools Built-In
+
+More to be Announced Soon!
