@@ -12,7 +12,7 @@ _More TBA Soon_.
 
 # Known Bugs / Issues
 This is a collective list of known bugs / glitches / issues.
- * None / TBA
+ * Issue with Building .pak Files - LZMA Compression is _incompatible_ with C-Engine. This will be hotfixed soon.
 
 # Running the Utility
 ## As an Executable / Binary
