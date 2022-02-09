@@ -1,7 +1,7 @@
 # Dying Light 2 PAKFile Utility
 A **Dying Light 2 (DL2) PAKFile Utility** for **Modders** and **Mod Makers**.<br>
 This tool aims to make PAKFile (`.pak` files) modding a breeze for both Dying Light 2 modders and mod makers.<br>
-See the [Roadmap](https://github.com/RHQOnline/DL2-PAKFile-Utility#roadmap) for a better idea of what's to come!<br>
+See the [roadmap](https://github.com/RHQOnline/DL2-PAKFile-Utility#roadmap) for a better idea of what's to come!<br>
 _More TBA Soon_.
 
 # Features
