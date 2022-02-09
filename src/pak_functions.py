@@ -50,7 +50,7 @@ def write_to_pakfile(input_directory: str = "./", output_name: str = "data2.pak"
             print(c.PURPLE + file_name)
         clearColor()
 
-        with ZipFile(output_name, 'w', zipfile.ZIP_LZMA) as zipobj:
+        with ZipFile(output_name, 'w', zipfile.ZIP_DEFLATED) as zipobj:
             length = len(input_directory)
             for root, directories, files in walk(input_directory):
                 folder = root[length:]
