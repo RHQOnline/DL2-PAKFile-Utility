@@ -1,6 +1,6 @@
 # Dying Light 2 PAKFile Utility
 A **Dying Light 2 (DL2) PAKFile Utility** for **Modders** and **Mod Makers**.<br>
-This tool aims to make PAKFile modding a breeze for both Dying Light 2 modders and mod makers.<br>
+This tool aims to make PAKFile (`.pak` files) modding a breeze for both Dying Light 2 modders and mod makers.<br>
 See the [Roadmap](https://github.com/RHQOnline/DL2-PAKFile-Utility#roadmap) for a better idea of what's to come!<br>
 _More TBA Soon_.
 
@@ -45,10 +45,11 @@ This is a loose outline of what is in the future for the DL2 PAKFile Utility!
 - [x] Ability to Extract PAKFiles into a Folder to Edit
 - [x] Ability to Build a PAKFile from a Folder
 - [x] Incredibly Efficient Mod Builder with 79% (21% of Original Size) [LZMA Compression](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Markov_chain_algorithm) on the size of the mods!
-- [ ]  GUI Integration
-- [ ]  Intelligently Browse DL2 PAKFile Folder Contents
-- [ ]  Detailed Documentation for both the Application and for Modding DL2
-- [ ]  Auto-Updating Feature for the Utility that Pulls from GitHub
-- [ ]  More Modding Tools Built-In
+- [ ] Search PAKFiles for Specific Contents
+- [ ] GUI Integration
+- [ ] Intelligently Browse DL2 PAKFile Folder Contents (MOD MANAGER FUNCTIONALITY)
+- [ ] Detailed Documentation for both the Application and for Modding DL2
+- [ ] Auto-Updating Feature for the Utility that Pulls from GitHub
+- [ ] More Modding Tools Built-In
 
 More to be Announced Soon!
