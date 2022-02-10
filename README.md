@@ -11,7 +11,7 @@ _More TBA Soon_.
 
 # Known Bugs / Issues
 This is a collective list of known bugs / glitches / issues.
- - ~~False-flagging for antiviruses.~~ **BOOTLOADER RECOMPILED - FIXED IN NEXT UPDATE!** See [this link](https://www.reddit.com/r/techsupport/comments/of8vph/windows_defender_identified_my_own_program_as/) for an in-depth explanation. TL;DR - a lot of people use `pyinstaller`, the tool used to freeze the executable, for malicious purposes. Thusly, applications built with the signature of `pyinstaller` may also be flagged as a virus simply by association of the method used to compile the executable. This will be fixed soon once I've rewritten the `pyinstaller` bootloader, or possibly switched to `nuitka`. Simply create an antivirus / firewall exception for the app, or build it from source yourself.
+ - N/A
 
 # Running the Utility
 ## As an Executable / Binary
@@ -38,7 +38,9 @@ As writing a new mod makes use of upping the integer in the `dataN.pak` filename
 **Q1: Why does this need to be ran as an administrator?**<br>
 **A1: Some people store their games / mod management folders in weird places that non-elevated applications typically can't access. This is simply insurance on that possibility, making sure _any user_ who stores their files _anywhere_ can use this tool!**<br><br>
 **Q2: Why not opt for a better compression algorithm?**<br>
-**A2: This application originally used LZMA compression, which works great, but is unfortunately unsupported by C-Engine. It appears the current compression method, the default zip compression method of deflation, is the only functioning method of compressing .pak files.**
+**A2: This application originally used LZMA compression, which works great, but is unfortunately unsupported by `C-Engine`. It appears the current compression method, the default zip compression method of deflation, is the only functioning method of compressing .pak files.**<br><br>
+**Q3: Why is this flagging as a virus on my PC? Help!**<br>
+**A3: First and foremost: this is patched in every version post-v0.3.9. This issue was due to `pyinstaller`, the application's .exe build tool. Many users have used `pyinstaller` to make malware and things such as Discord token stealers, so most applications built with `pyinstaller` flag as a virus simply by association (the traces `pyinstaller`'s bootloader leaves on the file makes it identifiable, so malware build on `pyinstaller` will cause apps that aren't malware but that are built with `pyinstaller` to SEEM like malware).**
 
 # Roadmap
 This is a loose outline of what is in the future for the DL2 PAKFile Utility!
