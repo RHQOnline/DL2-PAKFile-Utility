@@ -11,7 +11,7 @@ _More TBA Soon_.
 
 # Known Bugs / Issues
 This is a collective list of known bugs / glitches / issues.
- - False-flagging for antiviruses. See [this link](https://www.reddit.com/r/techsupport/comments/of8vph/windows_defender_identified_my_own_program_as/) for an in-depth explanation. TL;DR - a lot of people use `pyinstaller`, the tool used to freeze the executable, for malicious purposes. Thusly, applications built with the signature of `pyinstaller` may also be flagged as a virus simply by association of the method used to compile the executable. This will be fixed soon once I've rewritten the `pyinstaller` bootloader, or possibly switched to `nuitka`. Simply create an antivirus / firewall exception for the app, or build it from source yourself.
+ - ~~False-flagging for antiviruses.~~ **BOOTLOADER RECOMPILED - FIXED IN NEXT UPDATE!** See [this link](https://www.reddit.com/r/techsupport/comments/of8vph/windows_defender_identified_my_own_program_as/) for an in-depth explanation. TL;DR - a lot of people use `pyinstaller`, the tool used to freeze the executable, for malicious purposes. Thusly, applications built with the signature of `pyinstaller` may also be flagged as a virus simply by association of the method used to compile the executable. This will be fixed soon once I've rewritten the `pyinstaller` bootloader, or possibly switched to `nuitka`. Simply create an antivirus / firewall exception for the app, or build it from source yourself.
 
 # Running the Utility
 ## As an Executable / Binary
