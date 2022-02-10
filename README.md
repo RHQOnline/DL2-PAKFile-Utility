@@ -11,7 +11,7 @@ _More TBA Soon_.
 
 # Known Bugs / Issues
 This is a collective list of known bugs / glitches / issues.
- * None / TBA
+ - False-flagging for antiviruses. See [this link](https://www.reddit.com/r/techsupport/comments/of8vph/windows_defender_identified_my_own_program_as/) for an in-depth explanation. TL;DR - a lot of people use `pyinstaller`, the tool used to freeze the executable, for malicious purposes. Thusly, applications built with the signature of `pyinstaller` may also be flagged as a virus simply by association of the method used to compile the executable. This will be fixed soon once I've rewritten the `pyinstaller` bootloader, or possibly switched to `nuitka`. Simply create an antivirus / firewall exception for the app, or build it from source yourself.
 
 # Running the Utility
 ## As an Executable / Binary
@@ -45,6 +45,7 @@ This is a loose outline of what is in the future for the DL2 PAKFile Utility!
 - [x] Ability to Examine PAKFiles (see size, validity, and any CRC / Header mismatch errors)
 - [x] Ability to Extract PAKFiles into a Folder to Edit
 - [x] Ability to Build a PAKFile from a Folder
+- [x] Rebuild Last PAK for Rapid Development
 - [ ] Search PAKFiles for Specific Contents
 - [ ] GUI Integration
 - [ ] Intelligently Browse DL2 PAKFile Folder Contents (MOD MANAGER FUNCTIONALITY)
