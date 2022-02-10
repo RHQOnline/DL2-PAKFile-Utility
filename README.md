@@ -36,7 +36,7 @@ As writing a new mod makes use of upping the integer in the `dataN.pak` filename
 
 # FAQ
 **Q1: Why does this need to be ran as an administrator?**<br>
-**A1: Some people store their games / mod management folders in weird places that non-elevated applications typically can't access. This is simply insurance on that possibility, making sure _any user_ who stores their files _anywhere_ can use this tool!**<br>
+**A1: Some people store their games / mod management folders in weird places that non-elevated applications typically can't access. This is simply insurance on that possibility, making sure _any user_ who stores their files _anywhere_ can use this tool!**<br><br>
 **Q2: Why not opt for a better compression algorithm?**<br>
 **A2: This application originally used LZMA compression, which works great, but is unfortunately unsupported by C-Engine. It appears the current compression method, the default zip compression method of deflation, is the only functioning method of compressing .pak files.**
 
