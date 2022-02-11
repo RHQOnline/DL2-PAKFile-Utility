@@ -17,14 +17,17 @@ def get_size_of_file(file_path: str):
 def check_pak_validity(input_pakfile: str):
     is_zip = is_zipfile(input_pakfile)
     if not is_zip:
-        raise PAKFileFormatError(f"Invalid Format - This File is NOT a PAKFile! ({input_pakfile})")
+        # raise PAKFileFormatError(f"Invalid Format - This File is NOT a PAKFile! ({input_pakfile})")
+        ...
     try:
         with ZipFile(input_pakfile, 'r') as zip:
             results_of_test = zip.testzip()
     except zipfile.BadZipfile as e:
-        raise PAKFileFormatError(f"Invalid Format - This File is NOT a PAKFile! ({input_pakfile + ' - ' + e})")
+        # raise PAKFileFormatError(f"Invalid Format - This File is NOT a PAKFile! ({input_pakfile + ' - ' + e})")
+        results_of_test = "Invalid File Format!"
     if results_of_test is not None:
-        raise PAKMismatchedCRC("Corruption - There is a CRC or File Header Mismatch in the PAKFile!")
+        # raise PAKMismatchedCRC("Corruption - There is a CRC or File Header Mismatch in the PAKFile!")
+        ...
     return is_zip, results_of_test
 
 
