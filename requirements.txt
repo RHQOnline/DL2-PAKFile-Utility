@@ -11,8 +11,12 @@ mccabe==0.6.1
 pefile==2021.9.3
 platformdirs==2.4.1
 pyinstaller==4.9
-pyinstaller-hooks-contrib==2022.0
+pyinstaller-hooks-contrib==2022.1
 pylint==2.12.2
+PyQt5==5.15.6
+PyQt5-Qt5==5.15.2
+PyQt5-sip==12.9.1
+PyQt5Designer==5.14.1
 pywin32-ctypes==0.2.0
 requests==2.27.1
 toml==0.10.2
