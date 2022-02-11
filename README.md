@@ -7,7 +7,7 @@ _More TBA Soon_.
 # Features
 - [x] Ability to Examine PAKFiles (see size, validity, and any CRC / Header mismatch errors)
 - [x] Ability to Extract PAKFiles into a Folder to Edit
-- [x] Ability to Build a PAKFile from a Folder
+- [x] Ability to Build / Re-Build a PAKFile from a Folder
 
 # Known Bugs / Issues
 This is a collective list of known bugs / glitches / issues.
@@ -40,7 +40,7 @@ As writing a new mod makes use of upping the integer in the `dataN.pak` filename
 **Q2: Why not opt for a better compression algorithm?**<br>
 **A2: This application originally used LZMA compression, which works great, but is unfortunately unsupported by `C-Engine`. It appears the current compression method, the default zip compression method of deflation, is the only functioning method of compressing .pak files.**<br><br>
 **Q3: Why is this flagging as a virus on my PC? Help!**<br>
-**A3: First and foremost: this is patched in every version post-v0.3.9. This issue was due to `pyinstaller`, the application's .exe build tool. Many users have used `pyinstaller` to make malware and things such as Discord token stealers, so most applications built with `pyinstaller` flag as a virus simply by association (the traces `pyinstaller`'s bootloader leaves on the file makes it identifiable, so malware build on `pyinstaller` will cause apps that aren't malware but that are built with `pyinstaller` to SEEM like malware).**
+**A3: First and foremost: this was patched in version 0.4.9. This issue was due to `pyinstaller`, the application's .exe build tool. Many users have used `pyinstaller` to make malware and things such as Discord token stealers, so most applications built with `pyinstaller` flag as a virus simply by association (the traces `pyinstaller`'s bootloader leaves on the file makes it identifiable, so malware build on `pyinstaller` will cause apps that aren't malware but that are built with `pyinstaller` to SEEM like malware).**
 
 # Roadmap
 This is a loose outline of what is in the future for the DL2 PAKFile Utility!
