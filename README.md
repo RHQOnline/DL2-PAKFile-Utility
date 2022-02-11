@@ -48,6 +48,7 @@ This is a loose outline of what is in the future for the DL2 PAKFile Utility!
 - [x] Ability to Extract PAKFiles into a Folder to Edit
 - [x] Ability to Build a PAKFile from a Folder
 - [x] Rebuild Last PAK for Rapid Development
+- [x] On-Screen Error and Exception Handling
 - [ ] Search PAKFiles for Specific Contents
 - [ ] GUI Integration
 - [ ] Intelligently Browse DL2 PAKFile Folder Contents (MOD MANAGER FUNCTIONALITY)
