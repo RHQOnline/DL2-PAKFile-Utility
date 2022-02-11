@@ -8,17 +8,21 @@ from src.app_config import _version, _developer, _github_url, _app_name
 
 _last_pak_name = None
 _last_pak_folder_path = None
+_max_selection_int = 4
 
 
 def do_check_for_admin():
     if adminCheck():
         main_menu()
     else:
-        raise UtilPermissionError("The PAKFile Utility isn't being ran as an Administrator!")
+        print(f"Please run the {c.FAIL + _app_name + c.END} as an {c.LIGHT_CYAN + 'Administrator' + c.END}!")
+        pause()
+        qExit()
+        # raise UtilPermissionError("The PAKFile Utility isn't being ran as an Administrator!")
 
 
 def main_menu():
-    global _last_pak_name, _last_pak_folder_path
+    global _last_pak_name, _last_pak_folder_path, _max_selection_int
     x = True
     while x:
         cls()
@@ -50,17 +54,24 @@ def main_menu():
                 elif _last_pak_name is not None and selection == 6:
                     _last_pak_name = None
                     _last_pak_folder_path = None
+                    _max_selection_int = 4
                 else:
-                    raise MenuSelectionError(f"Invalid Menu Selection: Out of Bounds [1-4] ({selection})")
+                    print(f"Invalid Menu Selection: Out of Bounds [1-{_max_selection_int}] ({c.FAIL + str(selection) + c.END})!")
+                    pause()
+                    # raise MenuSelectionError(f"Invalid Menu Selection: Out of Bounds [1-4] ({selection})")
             else:
-                raise MenuSelectionError(f"Invalid Menu Selection: Out of Bounds [1-4] ({selection})")
+                print(f"Invalid Menu Selection: Out of Bounds [1-{_max_selection_int}] ({c.FAIL + str(selection) + c.END})!")
+                pause()
+                # raise MenuSelectionError(f"Invalid Menu Selection: Out of Bounds [1-4] ({selection})")
         else:
-            raise MenuSelectionError(f"Invalid Menu Selection: Integer Not Supplied ({selection})")
+            print(f"Invalid Menu Selection: Integer Not Supplied ({c.RED + selection + c.END})")
+            pause()
+            # raise MenuSelectionError(f"Invalid Menu Selection: Integer Not Supplied ({selection})")
 
 
 def validity_check(file):
     validity, errors = check_pak_validity(file)
-    print(f"PAKFile Validity: {(c.GREEN + str(validity) + c.END) if validity else (c.RED + str(validity) + c.END)}\nPAKFile Content Errors: {(c.GREEN + str(errors) + c.END) if errors is None else (c.RED + str(errors) + c.END)}\n")
+    print(f"PAKFile Validity: {(c.GREEN + 'Valid' + c.END) if validity else (c.RED + 'Invalid' + c.END)}\nPAKFile Content Errors: {(c.GREEN + str(errors) + c.END) if errors is None else (c.RED + str(errors) + c.END)}\n")
 
 
 def examine_pakfile():
@@ -70,13 +81,16 @@ def examine_pakfile():
     validity_check(fname)
     pause()
     print("")
-    read_from_zipfile(fname)
-    print("")
-    pause()
+    try:
+        read_from_zipfile(fname)
+        print("")
+        pause()
+    except:
+        ...
 
 
 def create_pakfile():
-    global _last_pak_name, _last_pak_folder_path
+    global _last_pak_name, _last_pak_folder_path, _max_selection_int
     folder = get_input("Enter Folder Path: " + c.LIGHT_RED)
     pakname = get_input(c.END + "Enter PAKFile Path and Name: " + c.LIGHT_RED)
     clearColor()
@@ -88,6 +102,7 @@ def create_pakfile():
     print("All Files PAK'ed Successfully!\n")
     _last_pak_name = pakname
     _last_pak_folder_path = folder
+    _max_selection_int = 6
     pause()
 
 
@@ -107,10 +122,13 @@ def extract_pakfile():
     clearColor()
     print(f"Size of '{fname}': {c.BOLD + c.CYAN + get_size_of_file(fname) + c.END}\n")
     validity_check(fname)
-    read_from_zipfile(fname)
-    extract_zipfile(fname, opath)
-    print(f"\nSize of '{opath}': {c.BOLD + c.CYAN + get_folder_size(opath) + c.END}\n")
-    pause()
+    try:
+        read_from_zipfile(fname)
+        extract_zipfile(fname, opath)
+        print(f"\nSize of '{opath}': {c.BOLD + c.CYAN + get_folder_size(opath) + c.END}\n")
+        pause()
+    except:
+        pause()
 
 
 if __name__ == "__main__":
